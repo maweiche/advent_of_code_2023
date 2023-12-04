@@ -37,10 +37,8 @@ async function getSum() {
     for(let i = 0; i < new_array.length; i++) {
         const item = new_array[i];
         const item_combined = item.join('');
-        const item_number = parseInt(item_string);
+        const item_number = parseInt(item_combined);
         complete_array.push(item_number);
-
-        console.log(complete_array)
     }
 
     const sum = complete_array.reduce((a, b) => a + b, 0);
